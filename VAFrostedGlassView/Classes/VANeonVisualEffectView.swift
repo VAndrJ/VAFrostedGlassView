@@ -70,13 +70,16 @@ open class VANeonVisualEffectView: UIView {
     public struct Pointer {
         public let radius: CGFloat
         public let color: UIColor
+        public let isInstant: Bool
 
         public init(
             radius: CGFloat,
-            color: UIColor
+            color: UIColor,
+            isInstant: Bool = true
         ) {
             self.radius = radius
             self.color = color
+            self.isInstant = isInstant
         }
     }
 
@@ -250,13 +253,20 @@ open class VANeonVisualEffectView: UIView {
     }
 
     private func bind() {
-        guard pointer != nil else { return }
+        guard let pointer else { return }
 
         isUserInteractionEnabled = true
-        addGestureRecognizer(InstantPanGestureRecognizer(
-            target: self,
-            action: #selector(onPan(_:))
-        ))
+        if pointer.isInstant {
+            addGestureRecognizer(InstantPanGestureRecognizer(
+                target: self,
+                action: #selector(onPan(_:))
+            ))
+        } else {
+            addGestureRecognizer(UIPanGestureRecognizer(
+                target: self,
+                action: #selector(onPan(_:))
+            ))
+        }
     }
 
     private func configure() {

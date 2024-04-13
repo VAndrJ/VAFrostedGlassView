@@ -16,6 +16,9 @@
 ## Example
 
 
+![Comparison](https://raw.githubusercontent.com/VAndrJ/VAFrostedGlassView/master/Resources/frosted_glass.gif)
+
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 
