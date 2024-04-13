@@ -1,0 +1,16 @@
+PODS:
+  - VAFrostedGlassView (1.0.0)
+
+DEPENDENCIES:
+  - VAFrostedGlassView (from `../`)
+
+EXTERNAL SOURCES:
+  VAFrostedGlassView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VAFrostedGlassView: 4997a1bf0fc7fd1ccf90fb89f465ebbdcb3ab955
+
+PODFILE CHECKSUM: 5ec37868429b3c18057c1ef691acfad693b8200d
+
+COCOAPODS: 1.15.2

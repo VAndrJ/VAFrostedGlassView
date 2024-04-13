@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '13.0'
+
+target 'VAFrostedGlassView_Example' do
+  pod 'VAFrostedGlassView', :path => '../'
+
+  target 'VAFrostedGlassView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
