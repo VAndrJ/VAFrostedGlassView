@@ -16,7 +16,7 @@ public extension UIView {
     }
 
     func addAutolayoutSubviews(_ subviews: UIView...) {
-        subviews.forEach(addAutolayoutSubview(_:))
+        subviews.forEach { addAutolayoutSubview($0) }
     }
 
     @discardableResult
