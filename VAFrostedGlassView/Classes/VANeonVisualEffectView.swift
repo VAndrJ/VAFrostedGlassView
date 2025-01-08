@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class VANeonVisualEffectView: VANeonBaseView {
+open class VANeonVisualEffectView: VAInterfaceStyleTrackingView {
     public struct Corner {
         public let radius: CGFloat
         public let curve: CALayerCornerCurve
@@ -283,7 +283,7 @@ open class VANeonVisualEffectView: VANeonBaseView {
     }
 }
 
-open class VANeonBaseView: UIView {
+open class VAInterfaceStyleTrackingView: UIView {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
