@@ -61,17 +61,12 @@ public class VAThicknessVisualEffectView: UIVisualEffectView {
 
         filtersObservation = backdropLayer?.observe(
             \.filters,
-             options: [.initial, .new],
-             changeHandler: { [excludedFilters] layer, _ in
-                 layer.filters?.removeAll(where: {
-                     excludedFilters.contains(String(describing: $0))
-                 })
-             }
+            options: [.initial, .new],
+            changeHandler: { [excludedFilters] layer, _ in
+                layer.filters?.removeAll(where: { filter in
+                    excludedFilters.contains(String(describing: filter))
+                })
+            }
         )
-    }
-
-    deinit {
-        filtersObservation?.invalidate()
-        filtersObservation = nil
     }
 }
