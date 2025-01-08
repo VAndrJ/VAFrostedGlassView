@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class VANeonVisualEffectView: UIView {
+open class VANeonVisualEffectView: VANeonBaseView {
     public struct Corner {
         public let radius: CGFloat
         public let curve: CALayerCornerCurve
@@ -181,11 +181,6 @@ open class VANeonVisualEffectView: UIView {
         bind()
     }
 
-    @available(*, unavailable)
-    public required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
 
@@ -291,6 +286,18 @@ open class VANeonVisualEffectView: UIView {
             view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
             view.rightAnchor.constraint(equalTo: container.rightAnchor),
         ])
+    }
+}
+
+open class VANeonBaseView: UIView {
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    @available(*, unavailable)
+    public required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
