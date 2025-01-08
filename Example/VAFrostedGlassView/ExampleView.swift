@@ -20,8 +20,8 @@ class ExampleView: BaseView {
     ))
     private let frostedInteractiveGlassExampleView = VAFrostedGlassView(context: .init(
         corner: .init(radius: 48),
-        border: .init(color: .green.withAlphaComponent(0.3), width: 2),
-        neon: .init(color: .green, width: 10),
+        border: .init(color: .green.withAlphaComponent(0.3), width: 1),
+        neon: .init(color: .green, width: 15),
         pointer: .init(radius: 40, color: .green),
         thickness: 1
     ))
